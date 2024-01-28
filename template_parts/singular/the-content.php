@@ -7,4 +7,11 @@
  * @version 1.0
  */
 
-echo 'the_content';
+$content = apply_filters( 'the_content', get_the_content() );
+$output  = <<<HTML
+	<article>
+		$content
+	</article>
+HTML;
+
+echo wp_kses_post( $output );
