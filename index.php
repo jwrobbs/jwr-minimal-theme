@@ -12,10 +12,13 @@ get_header();
 // Title.
 require_once 'template_parts/shared/page-title.php';
 
+// Category and Byline for posts.
 if ( is_single() ) {
-	require_once 'template_parts/singular/byline.php';
+	include 'template_parts/singular/category-line.php';
+	include 'template_parts/singular/byline.php';
 }
 
+// Main content.
 if ( is_singular() ) {
 	require_once 'template_parts/singular/the-content.php';
 } elseif ( is_archive() ) {
