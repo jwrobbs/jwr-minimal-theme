@@ -3,14 +3,7 @@
 $base-font-size: 18px;
 $base-font-size-mobile: 16px;
 
-$line-height: 1.4;
-$line-height-heading: 1.2;
-
-$font-weight: 400;
-$font-weight-heading: 700;
-$heading-weight: 700;
-
-$typography-scale: 1.4;
+$typography-scale: 1.3;
 
 $heading1-size: 1rem * math.pow($typography-scale, 3);
 $heading2-size: 1rem * math.pow($typography-scale, 2);
