@@ -33,6 +33,21 @@ function setup() {
 }
 add_action( 'after_setup_theme', __NAMESPACE__ . '\setup' );
 
+/**
+ * Enqueue scripts and styles
+ *
+ * @return void
+ */
+function enqueue_scripts() {
+	wp_enqueue_style(
+		'jwr-minimal',
+		get_stylesheet_directory_uri() . '/css/app.css',
+		array(),
+		filemtime( get_stylesheet_directory() . '/css/app.css' )
+	);
+}
+
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_scripts' );
 
 /**
  * REMOVE GUTENBERG BLOCK LIBRARY CSS FROM LOADING ON FRONTEND.
