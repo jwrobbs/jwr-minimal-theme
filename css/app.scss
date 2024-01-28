@@ -1,0 +1,26 @@
+@font-face {
+	font-family: "Noto";
+	src: url("../fonts/Noto_Sans_Display/NotoSansDisplay-VariableFont_wdth,wght.ttf")
+		format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Noto";
+	src: url("../fonts/Noto_Sans_Display/NotoSansDisplay-Italic-VariableFont_wdth,wght.ttf")
+		format("truetype");
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Source Code Pro";
+	src: url("../fonts/Source_Code_Pro/SourceCodePro-Regular.ttf")
+		format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@import "scss/0-vendors/all", "scss/1-abstracts/all", "scss/2-base/all",
+	"scss/3-components/all", "scss/4-blocks/all", "scss/5-templates/all",
+	"scss/6-pages/all";

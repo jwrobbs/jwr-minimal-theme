@@ -1,0 +1,16 @@
+body,
+:root {
+	margin: 0;
+}
+.site-content {
+	@extend %container;
+
+	> .breakout {
+		@extend %breakout;
+	}
+
+	> .fullwidth {
+		@extend %fullwidth;
+		@extend %container;
+	}
+}

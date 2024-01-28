@@ -1,0 +1,47 @@
+.category-block {
+	max-width: 300px;
+	border: 1px solid $color-accent;
+	&__header {
+		display: grid;
+		grid-template-columns: 1fr 2rem;
+		column-gap: 0.25rem;
+		background-color: $color-accent;
+		padding: 0.5rem;
+	}
+	&__title,
+	&__count {
+		color: $white;
+		font-size: 1rem;
+		line-height: 1.2;
+		align-self: center;
+	}
+	&__count {
+		display: grid;
+		width: 2rem;
+		height: 2rem;
+		align-items: center;
+		justify-items: center;
+		background-color: $color-accent-hover;
+		border-radius: 50%;
+	}
+
+	&__content {
+		padding: 0.5rem;
+	}
+	&__list {
+		padding-left: 1rem !important;
+
+		li {
+			line-height: 1.1;
+			padding-bottom: 0.5rem;
+			a {
+				font-size: 0.9rem;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}

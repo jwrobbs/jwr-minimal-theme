@@ -1,0 +1,18 @@
+a.alignright {
+	max-width: 100%;
+	display: block;
+	width: 100%;
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+
+	@include bp("medium") {
+		float: right;
+		width: auto;
+	}
+
+	img {
+		display: inline-block;
+	}
+}

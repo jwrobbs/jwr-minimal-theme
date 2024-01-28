@@ -1,0 +1,14 @@
+.fp-content-lists {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-gap: 1rem;
+	margin-bottom: 1rem;
+
+	.category-block {
+		max-width: 100%;
+
+		a.wpmb-read-more {
+			margin: 0.5rem 1rem;
+		}
+	}
+}

@@ -1,0 +1,33 @@
+#main .posts {
+	.card {
+		border: 1px solid $color-accent;
+		padding: 1rem;
+
+		.category {
+			font-size: 0.9rem;
+			text-transform: uppercase;
+			// margin-bottom: 0.5rem;
+			font-variation-settings: "wght" 700;
+		}
+
+		.post-title {
+			font-size: 1.5rem;
+			// margin: 0.5rem 0;
+		}
+
+		.category,
+		.post-title {
+			a {
+				text-decoration: none;
+				color: $color-accent;
+
+				&:hover {
+					color: $color-accent-hover;
+				}
+			}
+		}
+		> * {
+			margin: 0.5rem 0;
+		}
+	}
+}

@@ -1,0 +1,11 @@
+body #ez-toc-container {
+	@extend %normal-width;
+	margin: 0.5rem inherit;
+
+	.ez-toc-title-container {
+		padding: 0.25rem 0.5rem;
+	}
+	.ez-toc-js-icon-con {
+		left: 0;
+	}
+}

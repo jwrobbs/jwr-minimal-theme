@@ -1,0 +1,36 @@
+.wpmb-read-more {
+	display: inline-block;
+	text-decoration: none;
+	border: 1px solid $color-accent;
+	font-size: 0.9rem;
+	font-variation-settings: "wght" 600;
+
+	&__decoration,
+	&__text {
+		padding: 0.25rem;
+		line-height: 1;
+	}
+
+	&__decoration {
+		display: inline-block;
+		background-color: $color-accent;
+		color: $white;
+	}
+
+	&__text {
+		display: inline-block;
+		color: $color-accent;
+		text-transform: uppercase;
+	}
+
+	&:hover {
+		border-color: $color-accent-hover;
+		.wpmb-read-more__decoration {
+			background-color: $color-accent-hover;
+		}
+		.wpmb-read-more__text {
+			color: $color-accent-hover;
+			color: $color-accent-hover;
+		}
+	}
+}

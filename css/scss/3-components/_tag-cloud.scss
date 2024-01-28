@@ -1,0 +1,23 @@
+.tag-cloud {
+	padding-top: 1rem;
+	border-top: 1px solid #eee;
+	// font-style: italic;
+	display: flex;
+	gap: 0.5rem;
+
+	a {
+		display: block;
+		border-radius: 3px;
+		border: 1px solid $color-accent;
+		padding: 0.25em 0.5em;
+		background-color: $color-accent;
+		color: $white;
+		text-decoration: none;
+		font-size: 0.9em;
+
+		&:hover {
+			background-color: $color-accent-hover;
+			text-decoration: none;
+		}
+	}
+}

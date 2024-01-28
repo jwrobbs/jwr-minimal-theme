@@ -1,0 +1,48 @@
+body.mega-menu-primary #mega-menu-wrap-primary {
+	#mega-menu-primary {
+		border: 1px solid $color-accent;
+		box-shadow: 1px 1px 5px $color-accent;
+
+		.mega-search-wrap {
+			padding: 1rem 0;
+		}
+
+		// Search box.
+		li#mega-menu-item-106 .mega-search input[type="text"] {
+			display: block;
+			border: 1px solid $color-accent;
+			width: 80%;
+			margin: 0 auto;
+		}
+
+		li#mega-menu-item-106 .mega-search .search-icon {
+			// right: 5px;
+			right: 11%;
+			top: 1rem;
+		}
+
+		// Hover affect on menu items.
+		li.mega-menu-item > a.mega-menu-link {
+			&:hover {
+				color: $color-accent-hover;
+			}
+		}
+		// Menu highlight.
+		li.mega-menu-item.menu-highlight {
+			display: flex;
+			justify-content: center;
+			margin-bottom: 1rem;
+
+			a.mega-menu-link {
+				background-color: $color-accent;
+				color: $white;
+				font-size: 1.25em;
+				font-variation-settings: "wght" 700;
+
+				&:hover {
+					background-color: $color-accent-hover;
+				}
+			}
+		}
+	}
+}
