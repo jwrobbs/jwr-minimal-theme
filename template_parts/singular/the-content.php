@@ -7,6 +7,8 @@
  * @version 1.0
  */
 
+/*
+NOTE Switched to using the_content() instead of the code below because it was breaking the TOC plugin.
 $content = apply_filters( 'the_content', get_the_content() );
 $output  = <<<HTML
 	<article>
@@ -15,3 +17,8 @@ $output  = <<<HTML
 HTML;
 
 echo wp_kses_post( $output );
+*/
+
+echo '<article>';
+the_content();
+echo '</article>';
