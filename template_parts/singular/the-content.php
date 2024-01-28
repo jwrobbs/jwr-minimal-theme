@@ -21,4 +21,7 @@ echo wp_kses_post( $output );
 
 echo '<article>';
 the_content();
+if ( is_single() ) {
+	include 'tags.php';
+}
 echo '</article>';
