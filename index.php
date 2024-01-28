@@ -21,6 +21,5 @@ if ( is_singular() ) {
 } elseif ( is_archive() ) {
 	require_once 'template_parts/archive/the-content.php';
 }
-echo 'adsf';
 
 get_footer();
