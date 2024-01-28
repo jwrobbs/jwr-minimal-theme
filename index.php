@@ -9,6 +9,18 @@
 
 get_header();
 
+// Title.
+require_once 'template_parts/shared/page-title.php';
+
+if ( is_single() ) {
+	require_once 'template_parts/singular/byline.php';
+}
+
+if ( is_singular() ) {
+	require_once 'template_parts/singular/the-content.php';
+} elseif ( is_archive() ) {
+	require_once 'template_parts/archive/the-content.php';
+}
 echo 'adsf';
 
 get_footer();
