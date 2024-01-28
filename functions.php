@@ -7,7 +7,7 @@
  * @version 1.0
  */
 
-namespace WPMB_Theme_2024;
+namespace JWR_Minimal;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -25,9 +25,9 @@ function setup() {
 
 	\register_nav_menus(
 		array(
-			'primary' => __( 'Primary Menu', 'wpmb-theme-2024' ),
-			'footer'  => __( 'Footer Menu', 'wpmb-theme-2024' ),
-			'social'  => __( 'Social Menu', 'wpmb-theme-2024' ),
+			'primary' => __( 'Primary Menu', 'jwr_minimal' ),
+			'footer'  => __( 'Footer Menu', 'jwr_minimal' ),
+			'social'  => __( 'Social Menu', 'jwr_minimal' ),
 		)
 	);
 }
