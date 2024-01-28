@@ -37,7 +37,7 @@
 
 		<?php
 			require_once 'template_parts/header/brand-title.php';
-			require_once 'template_parts/header/main-nav.php';
+			wp_nav_menu( array( 'theme_location' => 'primary' ) );
 		?>
 	</header><!-- #masthead -->
 
