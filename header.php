@@ -35,17 +35,12 @@
 
 	<header id="masthead" class="site-header">
 
-		<?php get_template_part( 'template-parts/header/header', 'image' ); ?>
-
-		<?php if ( has_nav_menu( 'top' ) ) : ?>
-			<div class="navigation-top">
-				<div class="wrap">
-					<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
-				</div><!-- .wrap -->
-			</div><!-- .navigation-top -->
-		<?php endif; ?>
-
+		<?php
+			require_once 'template_parts/header/brand-title.php';
+			require_once 'template_parts/header/main-nav.php';
+		?>
 	</header><!-- #masthead -->
 
 	<div class="site-content-contain">
 		<div id="content" class="site-content">
+			
