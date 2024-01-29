@@ -16,7 +16,6 @@ require_once 'template_parts/shared/page-title.php';
 
 // Category and Byline for posts.
 if ( is_single() ) {
-	// include 'template_parts/singular/category-line.php';
 	include 'template_parts/singular/byline.php';
 }
 
