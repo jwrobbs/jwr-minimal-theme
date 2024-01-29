@@ -1,33 +1,35 @@
 #masthead {
 	@extend %container;
 	padding: 0.5rem 0;
-	background-color: $color-accent;
+	// background-color: $color-accent;
 
-	.header-container {
+	.header-inner {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
 
-	.site-name {
+	.site-title {
+		width: 175px;
 		text-transform: uppercase;
-		// font-variation-settings: "wght" 400, "wdth" $header-text-width;
-		letter-spacing: 1px;
-		font-size: 32px;
-		word-spacing: -1rem;
-		color: $white;
+		font-variation-settings: "wght" 400;
+		letter-spacing: 0.5px;
+		font-size: 27px;
+		// word-spacing: -1rem;
+		color: $text-color;
 
 		a {
-			color: $white;
+			color: $text-color;
 			text-decoration: none;
-		}
 
-		.site-name-heavy {
-			font-variation-settings: "wght" 500, "wdth" $header-text-width;
+			&:hover {
+				color: $color-accent-hover;
+			}
 		}
-		.site-name-light {
-			font-variation-settings: "wght" 300, "wdth" $header-text-width;
-		}
+	}
+
+	.site-description {
+		font-size: 0.8rem;
 	}
 
 	.mega-toggle-label {
