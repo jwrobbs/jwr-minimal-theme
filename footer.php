@@ -16,11 +16,20 @@
 ?>
 
 </main><!-- #content -->
-
 		<footer id="colophon" class="site-footer">
+			<hr>
 			<div class="wrap">
 
-footer
+				<div class=copyright>
+					<?php
+					// Get the current year.
+					$the_year = gmdate( 'Y' );
+					if ( '2024' !== $the_year ) {
+						$the_year = '2024-' . $the_year;
+					}
+					?>
+					<p>&copy; <?php echo esc_html( $the_year ); ?> Josh Robbs. All rights reserved.</p>
+				</div><!-- .copyright -->
 			</div><!-- .wrap -->
 		</footer><!-- #colophon -->
 	</div><!-- .site-content-contain -->
