@@ -12,5 +12,5 @@ if ( is_singular() ) {
 } elseif ( is_archive() ) {
 	the_archive_title( '<h1 class="archive-title">', '</h1>' );
 } elseif ( is_home() ) {
-	echo '<h1 class="archive-title">Latest Articles</h1>';
+	echo '<div class="archive-title">Latest Articles</div>';
 }
