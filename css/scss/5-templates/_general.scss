@@ -5,12 +5,12 @@ body,
 .site-content {
 	@extend %container;
 
-	> .breakout {
-		@extend %breakout;
-	}
+	// 	> .breakout {
+	// 		@extend %breakout;
+	// 	}
 
-	> .fullwidth {
-		@extend %fullwidth;
-		@extend %container;
-	}
+	// 	> .fullwidth {
+	// 		@extend %fullwidth;
+	// 		@extend %container;
+	// 	}
 }
