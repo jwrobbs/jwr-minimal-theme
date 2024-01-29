@@ -1,3 +1,5 @@
-// @import "general"; // Load this first.
+@import "general"; // Load this first.
 
-// @import "header", "archives";
+@import "header";
+
+// @import "archives";
