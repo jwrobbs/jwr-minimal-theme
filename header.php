@@ -34,11 +34,12 @@
 	</a>
 
 	<header id="masthead" class="site-header">
-
+		<div class='header-inner'>
 		<?php
 			require_once 'template_parts/header/brand-title.php';
 			wp_nav_menu( array( 'theme_location' => 'primary' ) );
 		?>
+		</div><!-- .header-inner -->
 	</header><!-- #masthead -->
 
 	<div class="site-content-contain">
