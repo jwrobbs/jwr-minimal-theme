@@ -16,6 +16,43 @@
 	font-weight: normal;
 	font-style: normal;
 }
+#masthead, .site-content {
+	--content-width: 100%;
+	--breakout-offset: 0px;
+	display: block;
+}
+@media (min-width: 767px) {
+	#masthead, .site-content {
+		--content-width: 550px;
+		--breakout-offset: 75px;
+	}
+}
+@media (min-width: 992px) {
+	#masthead, .site-content {
+		--content-width: 700px;
+		--breakout-offset: 125px;
+	}
+}
+@media (min-width: 1200px) {
+	#masthead, .site-content {
+		--content-width: 1024px;
+		--breakout-offset: 88px;
+	}
+}
+#masthead > *, .site-content > * {
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+}
+
+#masthead > *, .site-content > * {
+	width: var(--content-width);
+}
+
+#masthead > *, .site-content > * {
+	padding: 0 1rem;
+}
+
 body,
 :root {
 	font-family: "Noto", sans-serif;
@@ -38,7 +75,8 @@ h4,
 h5,
 h6 {
 	font-family: "Noto", sans-serif;
-	font-weight: 700;
+	font-weight: normal;
+	font-variation-settings: "wght" 700;
 	line-height: 1.2;
 	margin: 0.25em auto;
 }
@@ -199,6 +237,68 @@ q {
 	top: 5px;
 	width: auto;
 	z-index: 100000; /* Above WP toolbar. */
+}
+
+.home .archive-title {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.posts article {
+	margin-bottom: 0.5rem;
+}
+
+body,
+:root {
+	margin: 0;
+}
+
+#masthead {
+	padding: 0.5rem 0;
+}
+#masthead .header-inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#masthead .site-title {
+	width: 175px;
+	margin: 0px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	font-size: 27px;
+	color: #000000;
+}
+#masthead .site-title a {
+	color: #000000;
+	text-decoration: none;
+	font-weight: auto;
+	font-variation-settings: "wght" 400;
+}
+#masthead .site-title a:hover {
+	color: #004499;
+}
+#masthead .site-description {
+	font-size: 0.8rem;
+}
+#masthead .mega-toggle-label {
+	display: none !important;
+	font-variation-settings: "wdth" 75;
+}
+@media (min-width: 767px) {
+	#masthead .mega-toggle-label {
+		display: block !important;
+	}
+}
+
+main .navigation ol {
+	display: flex;
+	justify-content: center;
+	padding: 1rem 0;
+}
+
+.site-content .tags {
+	margin: 1em 0;
 }
 
 .fp-content-lists {
