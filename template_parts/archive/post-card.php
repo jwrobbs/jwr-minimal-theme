@@ -15,9 +15,9 @@ if ( has_excerpt() ) {
 	$post_excerpt = get_the_excerpt();
 } else {
 	$post_excerpt = get_the_content();
-	$post_excerpt = wp_trim_words( $post_excerpt, 20, '...' );
+	$post_excerpt = wp_trim_words( $post_excerpt, 20, '' );
 }
-$post_excerpt = "<span class='post-excerpt'>$post_excerpt</span>";
+$post_excerpt = "<span class='post-excerpt'>$post_excerpt</span>  <a href='$post_link'>>></a>";
 
 if ( ! is_category() ) {
 	$post_categories = get_the_category_list( ', ' );
