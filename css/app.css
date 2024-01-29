@@ -16,40 +16,40 @@
 	font-weight: normal;
 	font-style: normal;
 }
-#masthead, .site-content {
+#colophon, #masthead, .site-content {
 	--content-width: 100%;
 	--breakout-offset: 0px;
 	display: block;
 }
 @media (min-width: 767px) {
-	#masthead, .site-content {
+	#colophon, #masthead, .site-content {
 		--content-width: 550px;
 		--breakout-offset: 75px;
 	}
 }
 @media (min-width: 992px) {
-	#masthead, .site-content {
+	#colophon, #masthead, .site-content {
 		--content-width: 700px;
 		--breakout-offset: 125px;
 	}
 }
 @media (min-width: 1200px) {
-	#masthead, .site-content {
+	#colophon, #masthead, .site-content {
 		--content-width: 1024px;
 		--breakout-offset: 88px;
 	}
 }
-#masthead > *, .site-content > * {
+#colophon > *, #masthead > *, .site-content > * {
 	margin-left: auto;
 	margin-right: auto;
 	box-sizing: border-box;
 }
 
-#masthead > *, .site-content > * {
+#colophon > *, #masthead > *, .site-content > * {
 	width: var(--content-width);
 }
 
-#masthead > *, .site-content > * {
+#colophon > *, #masthead > *, .site-content > * {
 	padding: 0 1rem;
 }
 
@@ -299,6 +299,14 @@ main .navigation ol {
 
 .site-content .tags {
 	margin: 1em 0;
+}
+
+#colophon {
+	margin-top: 2rem;
+}
+#colophon .copyright {
+	margin-bottom: 1rem;
+	text-align: center;
 }
 
 .fp-content-lists {

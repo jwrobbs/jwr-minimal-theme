@@ -1,0 +1,9 @@
+#colophon {
+	@extend %container;
+	margin-top: 2rem;
+
+	.copyright {
+		margin-bottom: 1rem;
+		text-align: center;
+	}
+}
