@@ -19,7 +19,9 @@ h4,
 h5,
 h6 {
 	font-family: $font-heading;
-	font-weight: $font-weight-heading;
+	font-weight: normal;
+	// font-weight: $font-weight-heading;
+	font-variation-settings: "wght" $font-weight-heading;
 	line-height: $line-height-heading;
 	margin: 0.25em auto;
 }
