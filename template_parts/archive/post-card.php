@@ -11,14 +11,18 @@ $post_date  = get_the_date();
 $post_title = get_the_title();
 $post_link  = get_the_permalink();
 
-$post_excerpt = get_the_excerpt();
+if ( has_excerpt() ) {
+	$post_excerpt = get_the_excerpt();
+} else {
+	$post_excerpt = get_the_content();
+	$post_excerpt = wp_trim_words( $post_excerpt, 20, '...' );
+}
 $post_excerpt = "<span class='post-excerpt'>$post_excerpt</span>";
 
 if ( ! is_category() ) {
 	$post_categories = get_the_category_list( ', ' );
 	$post_categories = "<span class='post-categories'>($post_categories)</span>";
 }
-
 
 $output = <<<HTML
 	<article>
