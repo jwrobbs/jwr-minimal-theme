@@ -21,7 +21,7 @@ if ( is_single() ) {
 // Main content.
 if ( is_singular() ) {
 	require_once 'template_parts/singular/the-content.php';
-} elseif ( is_archive() ) {
+} elseif ( is_archive() || is_home() ) {
 	require_once 'template_parts/archive/the-content.php';
 }
 
