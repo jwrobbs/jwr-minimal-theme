@@ -1,5 +1,13 @@
-#main .posts {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-gap: 1rem;
+// #main .posts {
+// 	display: grid;
+// 	grid-template-columns: 1fr;
+// 	grid-gap: 1rem;
+// }
+
+main .navigation {
+	ol {
+		display: flex;
+		justify-content: center;
+		padding: 1rem 0;
+	}
 }
