@@ -1,4 +1,9 @@
 .site-content {
+	p:has(> iframe) {
+		display: flex;
+		justify-content: center;
+	}
+
 	.tags {
 		margin: 1em 0;
 	}
