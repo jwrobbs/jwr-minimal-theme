@@ -1,3 +1,27 @@
-.posts article {
-	margin-bottom: 0.5rem;
+.home,
+.archive {
+	.posts article {
+		margin-bottom: 0.5rem;
+
+		.post-date {
+			font-size: 0.8rem;
+		}
+
+		.post-title {
+			font-variation-settings: "wght" 700;
+		}
+
+		.read-more {
+			font-variation-settings: "wght" 700;
+			letter-spacing: -0.5px;
+			font-size: 0.8rem;
+
+			text-decoration: none;
+			color: $color-accent-hover;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
 }
