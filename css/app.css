@@ -113,7 +113,7 @@ pre {
 }
 
 blockquote {
-	margin: 0.5rem 1rem;
+	margin: 0.5rem 3rem;
 	padding: 0.5rem 1rem;
 	background-color: #002244;
 }
@@ -245,8 +245,36 @@ q {
 	padding-bottom: 1em;
 }
 
-.posts article {
+.site-content .byline {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	font-size: 0.9em;
+	font-style: italic;
+}
+
+.home .posts article,
+.archive .posts article {
 	margin-bottom: 0.5rem;
+}
+.home .posts article .post-date,
+.archive .posts article .post-date {
+	font-size: 0.8rem;
+}
+.home .posts article .post-title,
+.archive .posts article .post-title {
+	font-variation-settings: "wght" 700;
+}
+.home .posts article .read-more,
+.archive .posts article .read-more {
+	font-variation-settings: "wght" 700;
+	letter-spacing: -0.5px;
+	font-size: 0.8rem;
+	text-decoration: none;
+	color: #004499;
+}
+.home .posts article .read-more:hover,
+.archive .posts article .read-more:hover {
+	text-decoration: underline;
 }
 
 body,
@@ -298,6 +326,10 @@ main .navigation ol {
 	padding: 1rem 0;
 }
 
+.site-content p:has(> iframe) {
+	display: flex;
+	justify-content: center;
+}
 .site-content .tags {
 	margin: 1em 0;
 }
