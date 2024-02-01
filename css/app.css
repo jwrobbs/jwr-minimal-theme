@@ -330,6 +330,14 @@ main .navigation ol {
 	display: flex;
 	justify-content: center;
 }
+.site-content P a:has(> img.alignright) {
+	float: right;
+	margin-left: 1rem;
+}
+.site-content P a:has(> img.alignleft) {
+	float: left;
+	margin-right: 1rem;
+}
 .site-content .tags {
 	margin: 1em 0;
 }

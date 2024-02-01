@@ -4,6 +4,15 @@
 		justify-content: center;
 	}
 
+	P a:has(> img.alignright) {
+		float: right;
+		margin-left: 1rem;
+	}
+	P a:has(> img.alignleft) {
+		float: left;
+		margin-right: 1rem;
+	}
+
 	.tags {
 		margin: 1em 0;
 	}
