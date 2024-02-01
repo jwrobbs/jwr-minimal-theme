@@ -4,11 +4,19 @@
 		justify-content: center;
 	}
 
-	P a:has(> img.alignright) {
+	p a:has(> img.alignright) {
+		float: right;
+	}
+
+	p img.alignright {
 		float: right;
 		margin-left: 1rem;
 	}
-	P a:has(> img.alignleft) {
+	p a:has(> img.alignleft) {
+		float: left;
+	}
+
+	p img.alignleft {
 		float: left;
 		margin-right: 1rem;
 	}
