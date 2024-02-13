@@ -11,7 +11,7 @@ namespace JWR_Minimal;
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'WP_POST_REVISIONS', 3 );
+
 
 // require_once 'scripts/autoload.php'; // Not added yet.
 
