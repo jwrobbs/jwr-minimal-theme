@@ -82,3 +82,36 @@ function add_website_icons() {
 }
 add_action( 'wp_head', __NAMESPACE__ . '\add_website_icons' );
 add_action( 'admin_head', __NAMESPACE__ . '\add_website_icons' );
+
+/**
+ * Get linked category list.
+ *
+ * @param int|false $post_id The post ID.
+ *
+ * @return string
+ */
+function get_linked_category_list( $post_id = false ) {
+	$post_id         = $post_id ? $post_id : get_the_ID();
+	$post_categories = get_the_category( get_the_ID() );
+
+	$categories_array = array();
+	foreach ( $post_categories as $category ) {
+		$category->name     = \str_replace( ' ', '&nbsp;', $category->name );
+		$categories_array[] = array( $category->name, get_category_link( $category->term_id ) );
+	}
+
+	$count = 0;
+	$html  = '';
+
+	foreach ( $categories_array as $category ) {
+
+		if ( 0 !== $count ) {
+			$html .= ', ';
+		}
+		$html .= "<a href='$category[1]'>$category[0]</a>";
+
+		++$count;
+	}
+
+	return $html;
+}

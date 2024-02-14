@@ -7,6 +7,8 @@
  * @version 1.0
  */
 
+use function JWR_Minimal\get_linked_category_list;
+
 $post_date  = get_the_date();
 $post_date  = "<span class='post-date'>$post_date</span>";
 $post_title = get_the_title();
@@ -21,11 +23,7 @@ if ( has_excerpt() ) {
 $post_excerpt = "<span class='post-excerpt'>$post_excerpt</span>  <a href='$post_link' class='read-more'>>>></a>";
 
 if ( ! is_category() ) {
-	$post_categories = get_the_category_list( ', ' );
-
-	// Non-breaking spaces between words of the category, but not between categories.
-	$post_categories = str_replace( ' ', '&nbsp;', $post_categories );
-	$post_categories = str_replace( ',&nbsp;', ', ', $post_categories );
+	$post_categories = get_linked_category_list( get_the_ID() );
 	$post_categories = "<span class='post-categories'>($post_categories)</span>";
 }
 
