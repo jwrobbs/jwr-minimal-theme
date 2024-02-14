@@ -24,6 +24,7 @@ defined( 'ABSPATH' ) || exit;
 function setup() {
 	\add_theme_support( 'post-thumbnails' );
 	\add_theme_support( 'html5', array( 'gallery', 'style', 'search-form', 'caption', 'script' ) );
+	\add_theme_support( 'title-tag' );
 
 	\register_nav_menus(
 		array(
