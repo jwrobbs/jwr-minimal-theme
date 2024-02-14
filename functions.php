@@ -11,10 +11,6 @@ namespace JWR_Minimal;
 
 defined( 'ABSPATH' ) || exit;
 
-
-
-// require_once 'scripts/autoload.php'; // Not added yet.
-
 /**
  * Theme setup
  *
@@ -73,3 +69,16 @@ function remove_wp_block_library_css() {
 	remove_action( 'wp_body_open', 'wp_global_styles_render_svg_filters' );
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\remove_wp_block_library_css', 100 );
+
+/**
+ * Add website icons.
+ *
+ * @return void
+ */
+function add_website_icons() {
+	$path_to_theme = get_template_directory_uri();
+	$icon_path     = $path_to_theme . '/icons/favicon.png';
+	echo '<link rel="icon" sizes="16x16 32x32 48x48 96x96 180x180 512x512" type="image/png" href="' . $icon_path . '">'; // phpcs:ignore
+}
+add_action( 'wp_head', __NAMESPACE__ . '\add_website_icons' );
+add_action( 'admin_head', __NAMESPACE__ . '\add_website_icons' );
