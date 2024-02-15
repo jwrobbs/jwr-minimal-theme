@@ -179,8 +179,20 @@ function check_git_status( $dir ) {
 
 	$status_is_good = true;
 
-	if ( \str_contains( $output, 'Changes not staged' ) ) {
-		$status_is_good = false;
+	$bad_news = array(
+		'Changes not staged for commit',
+		'Your branch is ahead',
+		'Changes to be committed',
+		'Untracked files',
+		'Unmerged paths',
+		'Your branch is behind',
+	);
+
+	foreach ( $bad_news as $bad ) {
+		if ( \str_contains( $output, $bad ) ) {
+			$status_is_good = false;
+			break;
+		}
 	}
 
 	if ( $status_is_good ) {
