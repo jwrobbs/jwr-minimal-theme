@@ -143,16 +143,49 @@ function echo_git_data( $dir, $mode = 'plugin' ) {
 		$name = ' for ' . $name;
 	}
 
+	// Git status.
+	$status = '';
+	$status = check_git_status( $dir );
+
 	$output = <<<HTML
 		<div style="margin-bottom: 2rem;">
 			<p style="margin-top:0;">
 				<strong>💻 Git${name}</strong> (<a href="${repo_url}" target="_blank">repo</a>)
 			</p>
-			<ul style="margin:0;">
-				<li>Branch: <code ${colors}>${branch}</code></li>
-			</ul>
+			<p>
+				<span>Branch: <code ${colors}>${branch}</code></span> ${status} 
+			</p>
 		</div>
 	HTML;
 
 	echo wp_kses_post( $output );
+}
+
+/**
+ * Check git status.
+ *
+ * @param string $dir Directory.
+ * @return string
+ */
+function check_git_status( $dir ) {
+	if ( ! is_dir( $dir ) ) {
+		return false;
+	}
+	$output = \shell_exec( "cd ${dir} && git status" );
+
+	if ( ! $output ) {
+		return false;
+	}
+
+	$status_is_good = true;
+
+	if ( \str_contains( $output, 'Changes not staged' ) ) {
+		$status_is_good = false;
+	}
+
+	if ( $status_is_good ) {
+		return '✅';
+	} else {
+		return '❌';
+	}
 }
