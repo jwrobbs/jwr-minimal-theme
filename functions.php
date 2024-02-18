@@ -13,7 +13,11 @@ defined( 'ABSPATH' ) || exit;
 
 require_once 'dashboard_widgets/meta-box-cleanup.php';
 require_once 'dashboard_widgets/server-data.php';
-require_once 'dashboard_widgets/git-data.php';
+
+$home_url = get_home_url();
+if ( ! str_contains( $home_url, 'ddev.site' ) ) {
+	require_once 'dashboard_widgets/git-data.php';
+}
 
 /**
  * Theme setup
