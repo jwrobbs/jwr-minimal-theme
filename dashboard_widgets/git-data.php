@@ -14,6 +14,11 @@ namespace JWR\Theme\Dashboard_Widgets;
 
 defined( 'ABSPATH' ) || exit;
 
+$home_url = get_home_url();
+if ( ! str_contains( $home_url, 'ddev.site' ) ) {
+	return;
+}
+
 /**
  * Dashboard Widget for Git Data.
  *
@@ -117,14 +122,17 @@ function echo_git_data( $dir, $mode = 'plugin' ) {
 		$colors = ' style="background:orange; color:white"';
 	}
 
-	// Name.
+	// Name/version.
 	$name = '';
 	if ( 'plugin' === $mode ) {
 		$plugin_file = $dir . '/index.php';
 		$plugin_data = get_plugin_data( $plugin_file );
-
 		if ( $plugin_data['Name'] ) {
 			$name = $plugin_data['Name'];
+
+			if ( $plugin_data['Version'] ) {
+				$name = "${name} v${plugin_data['Version']}";
+			}
 		}
 	} else {
 		$style_path     = $dir . '/style.css';
@@ -144,8 +152,7 @@ function echo_git_data( $dir, $mode = 'plugin' ) {
 	}
 
 	// Git status.
-	$status = '';
-	$status = check_git_status( $dir );
+	$status = check_git_status( $dir ) ?? '';
 
 	$output = <<<HTML
 		<div style="margin-bottom: 2rem;">
@@ -169,12 +176,12 @@ function echo_git_data( $dir, $mode = 'plugin' ) {
  */
 function check_git_status( $dir ) {
 	if ( ! is_dir( $dir ) ) {
-		return false;
+		return;
 	}
 	$output = \shell_exec( "cd ${dir} && git status" );
 
 	if ( ! $output ) {
-		return false;
+		return;
 	}
 
 	$status_is_good = true;
