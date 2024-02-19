@@ -367,4 +367,53 @@ main .navigation ol {
 }
 .fp-content-lists .category-block a.wpmb-read-more {
 	margin: 0.5rem 1rem;
+}
+
+.page-id-2083 article {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+	.page-id-2083 article {
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
+	}
+}
+.page-id-2083 .piotnetforms__form > * {
+	padding: 0;
+}
+.page-id-2083 .piotnetforms__form > * {
+	display: block;
+	box-sizing: border-box;
+}
+.page-id-2083 .piotnet-column__inner > :not(.piotnet-widget),
+.page-id-2083 .piotnet-column__inner [data-piotnet-editor-widgets-item-root] {
+	padding: 0;
+}
+.page-id-2083 .piotnet-column__inner {
+	display: block;
+}
+.page-id-2083 .piotnetforms-fields-wrapper {
+	margin: 0.5rem 0;
+}
+.page-id-2083 .piotnetforms-field-container input,
+.page-id-2083 .piotnetforms-field-container select,
+.page-id-2083 .piotnetforms-field-container textarea {
+	width: 100%;
+	padding: 0.25em;
+	font-size: 1rem;
+	line-height: 1.2;
+	box-sizing: border-box;
+}
+.page-id-2083 .piotnetforms-field-container .piotnetforms-select-drop-down::after {
+	display: none;
+}
+.page-id-2083 .piotnetforms-button {
+	background-color: #002244;
+	color: white;
+	font-size: 1.4rem;
+	padding: 0.25em 0.5em;
+}
+.page-id-2083 .piotnetforms-button:hover {
+	background-color: #004499;
 }/*# sourceMappingURL=app.css.map */

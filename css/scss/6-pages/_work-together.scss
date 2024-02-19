@@ -1,0 +1,65 @@
+.page-id-2083 {
+	article {
+		display: grid;
+		grid-template-columns: 1fr;
+
+		@media (min-width: 768px) {
+			grid-template-columns: 1fr 1fr;
+			gap: 2rem;
+		}
+	}
+
+	.piotnetforms__form>* {
+		padding: 0;
+	}
+
+	.piotnetforms__form>* {
+		display: block;
+		box-sizing: border-box;
+	}
+
+	.piotnet-column__inner>:not(.piotnet-widget),
+	.piotnet-column__inner [data-piotnet-editor-widgets-item-root] {
+		padding: 0;
+	}
+
+	.piotnet-column__inner {
+		display: block;
+
+	}
+
+	.piotnetforms-fields-wrapper {
+		margin: .5rem 0;
+	}
+
+	.piotnetforms-field-container {
+
+		input,
+		select,
+		textarea {
+			width: 100%;
+			padding: .25em;
+			font-size: 1rem;
+			line-height: 1.2;
+			box-sizing: border-box;
+		}
+
+		.piotnetforms-select-drop-down::after {
+			display: none;
+		}
+
+	}
+
+	.piotnetforms-button {
+		background-color: $color-accent;
+		color: white;
+		font-size: 1.4rem;
+		padding: .25em .5em;
+
+		&:hover {
+			background-color: $color-accent-hover;
+		}
+	}
+
+	// .ready-to-work-together, .wants-more-info
+}
