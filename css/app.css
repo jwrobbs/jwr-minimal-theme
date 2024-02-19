@@ -277,6 +277,13 @@ q {
 	text-decoration: underline;
 }
 
+#mega-menu-wrap-primary .mega-sub-menu .widget_categories ul {
+	padding: 0;
+}
+#mega-menu-wrap-primary .mega-sub-menu .widget_categories ul li::marker {
+	content: "";
+}
+
 body,
 :root {
 	margin: 0;

@@ -1,0 +1,11 @@
+#mega-menu-wrap-primary {
+	.mega-sub-menu {
+		.widget_categories ul {
+			padding: 0;
+
+			li::marker {
+				content: '';
+			}
+		}
+	}
+}
