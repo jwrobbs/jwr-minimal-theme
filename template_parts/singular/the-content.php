@@ -20,7 +20,11 @@ echo wp_kses_post( $output );
 */
 
 echo '<article>';
-the_content();
+if ( is_page( 2083 ) ) {
+	include 'pages/work-together.php';
+} else {
+	the_content();
+}
 if ( is_single() ) {
 	include 'tags.php';
 }
