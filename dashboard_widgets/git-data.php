@@ -73,16 +73,16 @@ function echo_git_data( $dir, $mode = 'plugin' ) {
 	$mode_error_message = <<<HTML
 		<div>
 			<p style="margin:0;">😵 <strong>Requested mode does not exist.</strong></p>
-			<p>Mode: ${mode}<br />
-			Dir: ${git_dir}</p>
+			<p>Mode: {$mode}<br />
+			Dir: {$git_dir}</p>
 		</div>
 	HTML;
 
 	$dir_error_message = <<<HTML
 		<div>
 			<p style="margin:0;">😵 <strong>Could not find a Git directory at provided location.</strong></p>
-			<p>Mode: ${mode}<br />
-			Dir: ${git_dir}</p>
+			<p>Mode: {$mode}<br />
+			Dir: {$git_dir}</p>
 		</div>
 	HTML;
 
@@ -107,7 +107,7 @@ function echo_git_data( $dir, $mode = 'plugin' ) {
 	if ( $match ) {
 		$repo_url = str_replace( '.git', '', $matches[1] );
 	} else {
-		echo wp_kses_post( "Error getting repo URL: ${git_dir}" );
+		echo wp_kses_post( "Error getting repo URL: {$git_dir}" );
 		return;
 	}
 
@@ -131,7 +131,7 @@ function echo_git_data( $dir, $mode = 'plugin' ) {
 			$name = $plugin_data['Name'];
 
 			if ( $plugin_data['Version'] ) {
-				$name = "${name} v${plugin_data['Version']}";
+				$name = "{$name} v{$plugin_data['Version']}";
 			}
 		}
 	} else {
@@ -143,7 +143,7 @@ function echo_git_data( $dir, $mode = 'plugin' ) {
 
 		if ( $match ) {
 			$name = trim( $matches[1] );
-			$name = "theme: ${name}";
+			$name = "theme: {$name}";
 		}
 	}
 
@@ -157,10 +157,10 @@ function echo_git_data( $dir, $mode = 'plugin' ) {
 	$output = <<<HTML
 		<div style="margin-bottom: 2rem;">
 			<p style="margin-top:0;">
-				<strong>💻 Git${name}</strong> (<a href="${repo_url}" target="_blank">repo</a>)
+				<strong>💻 Git{$name}</strong> (<a href="{$repo_url}" target="_blank">repo</a>)
 			</p>
 			<p>
-				<span>Branch: <code ${colors}>${branch}</code></span> ${status} 
+				<span>Branch: <code {$colors}>{$branch}</code></span> {$status} 
 			</p>
 		</div>
 	HTML;
@@ -178,7 +178,7 @@ function check_git_status( $dir ) {
 	if ( ! is_dir( $dir ) ) {
 		return;
 	}
-	$output = \shell_exec( "cd ${dir} && git status" );
+	$output = \shell_exec( "cd {$dir} && git status" );
 
 	if ( ! $output ) {
 		return;

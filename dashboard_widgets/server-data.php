@@ -33,16 +33,16 @@ function add_custom_dashboard_widget_server_data() {
 	$results = \preg_match( $pattern, $server_info, $matches );
 	if ( $results ) {
 		$database   = $matches[1];
-		$db_version = "$database-${db_version} ";
+		$db_version = "$database-{$db_version} ";
 	}
 
 	$html = <<<HTML
 		<div class="built-panel">
 			<p style="margin-top:0;"><strong>Developer Info</strong></p>
 			<ul style="margin:0;">
-				<li>PHP <code>${php}</code></li>
-				<li>Database <code>${db_version}</code></li>
-				<li>WordPress <code>${wp}</code></li>
+				<li>PHP <code>{$php}</code></li>
+				<li>Database <code>{$db_version}</code></li>
+				<li>WordPress <code>{$wp}</code></li>
 			</ul>
 		</div>
 		HTML;
