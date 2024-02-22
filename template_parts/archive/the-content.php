@@ -21,7 +21,7 @@ if ( have_posts() ) {
 	require_once 'no-posts.php';
 }
 
-if ( function_exists( 'wp_paginate' ) ) {
+if ( function_exists( 'wp_paginate' ) && ! ( ( defined( 'WP_CLI' ) && WP_CLI ) ) ) {
 	wp_paginate();
 }
 
