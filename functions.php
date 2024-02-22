@@ -11,10 +11,10 @@ namespace JWR_Minimal;
 
 defined( 'ABSPATH' ) || exit;
 
-require_once 'dashboard_widgets/meta-box-cleanup.php';
-require_once 'dashboard_widgets/server-data.php';
+// require_once 'dashboard_widgets/meta-box-cleanup.php';
+// require_once 'dashboard_widgets/server-data.php';
 
-require_once 'dashboard_widgets/git-data.php';
+// require_once 'dashboard_widgets/git-data.php';
 /**
  * Theme setup
  *
