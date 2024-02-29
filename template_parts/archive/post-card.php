@@ -22,6 +22,7 @@ if ( has_excerpt() ) {
 }
 $post_excerpt = "<span class='post-excerpt'>$post_excerpt</span>  <a href='$post_link' class='read-more'>>>></a>";
 
+$post_categories = '';
 if ( ! is_category() ) {
 	$post_categories = get_linked_category_list( get_the_ID() );
 	$post_categories = "<span class='post-categories'>($post_categories)</span>";
