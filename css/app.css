@@ -266,7 +266,9 @@ q {
 	margin-bottom: 0.5rem;
 }
 .home .posts article .post-date,
-.archive .posts article .post-date {
+.home .posts article .post-categories,
+.archive .posts article .post-date,
+.archive .posts article .post-categories {
 	font-size: 0.8rem;
 }
 .home .posts article .post-title,

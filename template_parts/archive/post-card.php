@@ -20,18 +20,18 @@ if ( has_excerpt() ) {
 	$post_excerpt = get_the_content();
 	$post_excerpt = wp_trim_words( $post_excerpt, 20, '' );
 }
-$post_excerpt = "<span class='post-excerpt'>$post_excerpt</span>  <a href='$post_link' class='read-more'>>>></a>";
+$post_excerpt = "<div class='post-excerpt'>$post_excerpt  <a href='$post_link' class='read-more'>>>></a></div>";
 
 $post_categories = '';
 if ( ! is_category() ) {
 	$post_categories = get_linked_category_list( get_the_ID() );
-	$post_categories = "<span class='post-categories'>($post_categories)</span>";
+	$post_categories = "<span class='post-categories'>$post_categories:</span>";
 }
 
 $output = <<<HTML
 	<article>
-		$post_date: <a href="$post_link" class="post-title">$post_title</a>
-		$post_categories
+		$post_categories <a href="$post_link" class="post-title">$post_title</a>
+		$post_date
 		$post_excerpt
 	</article>
 HTML;
