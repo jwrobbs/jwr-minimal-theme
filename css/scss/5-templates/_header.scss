@@ -1,7 +1,8 @@
 #masthead {
 	@extend %container;
 	padding: 0.5rem 0;
-	// background-color: $color-accent;
+	background-color: $color-accent;
+	color: $menu-color;
 
 	.header-inner {
 		display: flex;
@@ -10,23 +11,24 @@
 	}
 
 	.site-title {
-		width: 175px;
+		// width: 200px;
+		width: auto;
 		margin: 0px;
 		text-transform: uppercase;
 
 		letter-spacing: 0.5px;
 		font-size: 27px;
 		// word-spacing: -1rem;
-		color: $text-color;
+		color: $menu-color;
 
 		a {
-			color: $text-color;
+			color: $menu-color;
 			text-decoration: none;
 			font-weight: auto;
 			font-variation-settings: "wght" 400;
 
 			&:hover {
-				color: $color-accent-hover;
+				color: $menu-color-hover;
 			}
 		}
 	}
@@ -37,7 +39,7 @@
 
 	.mega-toggle-label {
 		display: none !important;
-		font-variation-settings: "wdth" $header-text-width;
+		font-variation-settings: "wdth"$header-text-width;
 
 		@include bp("small") {
 			display: block !important;

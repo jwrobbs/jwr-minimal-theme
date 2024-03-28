@@ -11,6 +11,54 @@
 	font-style: italic;
 }
 @font-face {
+	font-family: "Montserrat";
+	src: url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Montserrat";
+	src: url("../fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Montserrat";
+	src: url("../fonts/Montserrat/Montserrat-Italic.ttf") format("truetype");
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: "Montserrat";
+	src: url("../fonts/Montserrat/Montserrat-BoldItalic.ttf") format("truetype");
+	font-weight: bold;
+	font-style: italic;
+}
+@font-face {
+	font-family: "Poppins";
+	src: url("../fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Poppins";
+	src: url("../fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Poppins";
+	src: url("../fonts/Poppins/Poppins-Italic.ttf") format("truetype");
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: "Poppins";
+	src: url("../fonts/Poppins/Poppins-BoldItalic.ttf") format("truetype");
+	font-weight: bold;
+	font-style: italic;
+}
+@font-face {
 	font-family: "Source Code Pro";
 	src: url("../fonts/Source_Code_Pro/SourceCodePro-Regular.ttf") format("truetype");
 	font-weight: normal;
@@ -60,7 +108,7 @@
 	margin-bottom: 0;
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;
-	font-family: "Noto", sans-serif;
+	font-family: "Montserrat", sans-serif;
 	font-weight: normal;
 	font-variation-settings: "wght" 700;
 	line-height: 1.2;
@@ -69,7 +117,7 @@
 
 body,
 :root {
-	font-family: "Noto", sans-serif;
+	font-family: "Poppins", sans-serif;
 	font-size: 16px;
 	line-height: 1.4;
 	color: #000000;
@@ -88,7 +136,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "Noto", sans-serif;
+	font-family: "Montserrat", sans-serif;
 	font-weight: normal;
 	font-variation-settings: "wght" 700;
 	line-height: 1.2;
@@ -157,7 +205,7 @@ thead {
 }
 
 tbody tr:nth-of-type(even) {
-	background-color: #004499;
+	background-color: #55aaff;
 	color: #ffffff;
 }
 tbody tr:nth-of-type(even) a {
@@ -281,18 +329,21 @@ q {
 	letter-spacing: -0.5px;
 	font-size: 0.8rem;
 	text-decoration: none;
-	color: #004499;
+	color: #55aaff;
 }
 .home .posts article .read-more:hover,
 .archive .posts article .read-more:hover {
 	text-decoration: underline;
 }
 
-#mega-menu-wrap-primary .mega-sub-menu .widget_categories ul {
-	padding: 0;
+#masthead #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link {
+	color: #ffffff;
 }
-#mega-menu-wrap-primary .mega-sub-menu .widget_categories ul li::marker {
-	content: "";
+#masthead #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item:hover > a.mega-menu-link {
+	color: #55aaff;
+}
+#masthead #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item:hover .mega-sub-menu {
+	border: 2px solid #004499;
 }
 
 body,
@@ -302,6 +353,8 @@ body,
 
 #masthead {
 	padding: 0.5rem 0;
+	background-color: #002244;
+	color: #ffffff;
 }
 #masthead .header-inner {
 	display: flex;
@@ -309,21 +362,21 @@ body,
 	align-items: center;
 }
 #masthead .site-title {
-	width: 175px;
+	width: auto;
 	margin: 0px;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
 	font-size: 27px;
-	color: #000000;
+	color: #ffffff;
 }
 #masthead .site-title a {
-	color: #000000;
+	color: #ffffff;
 	text-decoration: none;
 	font-weight: auto;
 	font-variation-settings: "wght" 400;
 }
 #masthead .site-title a:hover {
-	color: #004499;
+	color: #55aaff;
 }
 #masthead .site-description {
 	font-size: 0.8rem;
@@ -433,5 +486,5 @@ main .navigation ol {
 	padding: 0.25em 0.5em;
 }
 .page-id-2083 .piotnetforms-button:hover {
-	background-color: #004499;
+	background-color: #55aaff;
 }/*# sourceMappingURL=app.css.map */

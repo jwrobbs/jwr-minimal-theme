@@ -1,6 +1,7 @@
 // Color definitions.
 $blue-dark: #002244;
 $blue-medium: #004499;
+$blue-light: #55aaff;
 $red-dark: #820000;
 $red-medium: #990000;
 
@@ -10,7 +11,7 @@ $black: #000000;
 // Color assignments
 
 $color-accent: $blue-dark;
-$color-accent-hover: $blue-medium;
+$color-accent-hover: $blue-light;
 
 $color-alert: $red-dark;
 $color-alert-hover: $red-medium;
@@ -20,5 +21,5 @@ $heading-color: $black;
 $anchor-color: $blue-dark;
 $anchor-color-hover: $blue-medium;
 
-$menu-color: $black;
-$menu-color-hover: $black;
+$menu-color: $white;
+$menu-color-hover: $blue-light;

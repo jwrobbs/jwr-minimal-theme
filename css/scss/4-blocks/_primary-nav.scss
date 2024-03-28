@@ -1,3 +1,4 @@
+// Not currently loaded.
 body.mega-menu-primary #mega-menu-wrap-primary {
 	#mega-menu-primary {
 		border: 1px solid $color-accent;
@@ -22,11 +23,12 @@ body.mega-menu-primary #mega-menu-wrap-primary {
 		}
 
 		// Hover affect on menu items.
-		li.mega-menu-item > a.mega-menu-link {
+		li.mega-menu-item>a.mega-menu-link {
 			&:hover {
 				color: $color-accent-hover;
 			}
 		}
+
 		// Menu highlight.
 		li.mega-menu-item.menu-highlight {
 			display: flex;
