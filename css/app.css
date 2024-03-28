@@ -339,11 +339,11 @@ q {
 #masthead #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link {
 	color: #ffffff;
 }
+#masthead #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item .mega-sub-menu {
+	border: 2px solid #004499;
+}
 #masthead #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item:hover > a.mega-menu-link {
 	color: #55aaff;
-}
-#masthead #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item:hover .mega-sub-menu {
-	border: 2px solid #004499;
 }
 
 body,

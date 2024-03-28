@@ -20,15 +20,15 @@
 				>a.mega-menu-link {
 					color: $menu-color;
 				}
+
+				.mega-sub-menu {
+					border: 2px solid $blue-medium;
+				}
 			}
 
 			>li.mega-menu-item:hover {
 				>a.mega-menu-link {
 					color: $menu-color-hover;
-				}
-
-				.mega-sub-menu {
-					border: 2px solid $blue-medium;
 				}
 			}
 		}
