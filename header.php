@@ -21,19 +21,11 @@
 <link rel="profile" href="https://gmpg.org/xfn/11">
 
 <?php wp_head(); ?>
-<!-- Google tag (gtag.js) -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-1GZM1FC277"></script> -->
 
 </head>
 
 <body <?php body_class(); ?>>
-<!-- <script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
 
-	gtag('config', 'G-1GZM1FC277');
-</script> -->
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content">
