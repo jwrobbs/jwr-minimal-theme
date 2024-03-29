@@ -1,9 +1,14 @@
+footer {
+	padding: 1rem 0;
+	background-color: $blue-dark;
+}
+
 #colophon {
 	@extend %container;
 	margin-top: 2rem;
 
 	.copyright {
-		margin-bottom: 1rem;
+		// margin-bottom: 1rem;
 		text-align: center;
 	}
 }
