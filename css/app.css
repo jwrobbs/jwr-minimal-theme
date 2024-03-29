@@ -349,6 +349,7 @@ q {
 body,
 :root {
 	margin: 0;
+	background-color: #004499;
 }
 
 #masthead {
