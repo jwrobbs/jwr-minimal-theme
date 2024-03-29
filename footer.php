@@ -17,7 +17,6 @@
 
 </main><!-- #content -->
 		<footer id="colophon" class="site-footer">
-			<hr>
 			<div class="wrap">
 				<?php echo do_shortcode( '[ssi]' ); ?>
 				<div class=copyright>
