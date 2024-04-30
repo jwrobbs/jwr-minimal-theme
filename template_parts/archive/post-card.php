@@ -7,7 +7,11 @@
  * @version 1.0
  */
 
-use function JWR_Minimal\get_linked_category_list;
+namespace JWR_Minimal;
+
+use JWR_Minimal\functions\Content_Blocks;
+
+defined( 'ABSPATH' ) || exit;
 
 $post_date  = get_the_date();
 $post_date  = "<span class='post-date'>$post_date</span>";
@@ -24,7 +28,7 @@ $post_excerpt = "<div class='post-excerpt'>$post_excerpt  <a href='$post_link' c
 
 $post_categories = '';
 if ( ! is_category() ) {
-	$post_categories = get_linked_category_list( get_the_ID() );
+	$post_categories = Content_Blocks::get_linked_category_list( get_the_ID() );
 	$post_categories = "<span class='post-categories'>$post_categories:</span>";
 }
 
