@@ -19,5 +19,5 @@ if ( is_front_page() ) {
 			Josh Robbs
 		</a>
 	</<?php echo wp_kses_post( $brand_title_element ); ?>>
-	<div class='site-description'>Consulting & Web Development</div><!-- .site-description -->
+	<div class='site-description'>Website Consultant & Developer</div><!-- .site-description -->
 </div><!-- .site-title-container -->
