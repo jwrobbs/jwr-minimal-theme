@@ -58,6 +58,13 @@ class Theme_Setup {
 			array(),
 			filemtime( get_stylesheet_directory() . '/css/app.css' )
 		);
+
+		wp_enqueue_style(
+			'google-fonts',
+			'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&family=Barlow+Condensed:ital,wght@0,400;0,700;1,400;1,700&display=swap',
+			array(),
+			'1'
+		);
 	}
 
 	/**
